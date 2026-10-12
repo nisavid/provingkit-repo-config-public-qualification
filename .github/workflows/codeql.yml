@@ -1,0 +1,46 @@
+name: CodeQL
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: codeql-${{ github.repository }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fixture-codeql:
+    name: fixture-codeql
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Check out the analyzed revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+          lfs: false
+          submodules: false
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@24c54180a607b1449ed407dd24f251e4e9147c8d # v4.38.3
+        with:
+          languages: python
+          build-mode: none
+          config-file: ./.github/codeql/codeql-config.yml
+          source-root: .
+          dependency-caching: false
+          trap-caching: false
+          debug: false
+      - name: Analyze and deliver SARIF to code scanning
+        uses: github/codeql-action/analyze@24c54180a607b1449ed407dd24f251e4e9147c8d # v4.38.3
+        with:
+          category: /language:python
+          output: ${{ runner.temp }}/codeql-results
+          upload: always
+          upload-database: false
+          wait-for-processing: true
+          skip-queries: false
+          checkout_path: ${{ github.workspace }}

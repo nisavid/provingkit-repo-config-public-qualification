@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "hello",
+      "title": "Hello fixture",
+      "file": "resources/hello.md"
+    }
+  ]
+}

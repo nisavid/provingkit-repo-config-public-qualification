@@ -1,0 +1,10 @@
+name: Fixture CodeQL
+
+queries:
+  - uses: security-extended
+
+paths:
+  - fixture_catalog.py
+  - scripts
+paths-ignore:
+  - tests
