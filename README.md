@@ -31,3 +31,5 @@ python -m unittest discover -s tests -v
 ```
 
 This project is a qualification fixture. Hosted settings, analysis coverage, and merge enforcement require their own observed evidence. The authorized experiment ends by disabling workflows and retaining the repository.
+
+Documentation-only pull requests are part of this fixture's qualification cases. They exercise whether the maintained project checks report on non-code changes.
