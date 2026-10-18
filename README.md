@@ -37,3 +37,4 @@ Documentation-only pull requests are part of this fixture's qualification cases.
 <!-- Public fixture control: current check before omission. -->
 <!-- Public fixture control: current check omitted. -->
 <!-- Public fixture control: current check restored. -->
+<!-- Public fixture control: strict freshness experiment. -->
