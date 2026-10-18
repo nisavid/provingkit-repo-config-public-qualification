@@ -1,3 +1,4 @@
+<!-- Public fixture control: strict freshness base advance. -->
 # Repository configuration public qualification fixture
 
 This generated Python project supplies executable behavior and a separate content contract for Mergecraft's repository-configuration qualification. It contains no production service, deployment credentials, or private source.
