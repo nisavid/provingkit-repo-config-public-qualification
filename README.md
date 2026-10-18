@@ -34,3 +34,6 @@ This project is a qualification fixture. Hosted settings, analysis coverage, and
 
 Documentation-only pull requests are part of this fixture's qualification cases. They exercise whether the maintained project checks report on non-code changes.
 <!-- Public fixture control: project checks restored. -->
+<!-- Public fixture control: current check before omission. -->
+<!-- Public fixture control: current check omitted. -->
+<!-- Public fixture control: current check restored. -->
