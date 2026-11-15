@@ -1,2 +1,9 @@
 name: Fixture CodeQL
-queries: [
+
+queries:
+  - uses: security-extended
+
+paths:
+  - .
+paths-ignore:
+  - tests
